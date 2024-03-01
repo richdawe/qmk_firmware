@@ -1,0 +1,40 @@
+{
+    "manufacturer": "YMDK",
+    "keyboard_name": "YMD62 ISO QMK",
+    "url": "https://ymdkey.com/products/ymd62-iso-rgb-hot-swap-pcb-fully-programmable-support-via-vial",
+
+    "development_board": "bluepill",
+    "bootloader": "uf2boot",
+
+    "usb": {
+        "device_version": "0.0.4",
+        "pid": "0x0062",
+        "vid": "0x45D4"
+    },
+
+    "usb_doesnt_work": {
+        "wait_for": true
+    },
+
+    "matrix_pins": {
+        "cols": ["B0"],
+        "rows": ["A3"]
+    },
+    "diode_direction": "ROW2COL",
+
+    "features": {
+        "console": true,
+        "nkro": false,
+        "extrakey": false,
+        "mousekey": false
+    },
+
+    "community_layouts": ["ortho_1x1"],
+    "layouts": {
+        "LAYOUT_ortho_1x1": {
+            "layout": [
+                {"x": 0, "y": 0, "matrix": [0, 0]}
+            ]
+        }
+    }
+}
