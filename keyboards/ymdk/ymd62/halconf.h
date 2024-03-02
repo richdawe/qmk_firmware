@@ -25,7 +25,4 @@
 
 // #define HAL_USE_PWM TRUE
 
-// See keyboards/coarse/ixora/halconf.h - HAL serial USB?
-// VIRTSER_ENABLE
-
 #include_next <halconf.h>
