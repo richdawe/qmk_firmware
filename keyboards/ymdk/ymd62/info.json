@@ -18,11 +18,20 @@
     },
     "diode_direction": "ROW2COL",
 
+    "rgb_matrix": {
+        "driver": "WS2812"
+    },
+    "ws2812": {
+        "pin": "B9",
+        "driver": "pwm"
+    },
+
     "features": {
         "console": true,
         "nkro": true,
         "extrakey": true,
-        "mousekey": true
+        "mousekey": true,
+        "rgb_matrix": true
     },
 
     "community_layouts": ["60_iso"],
