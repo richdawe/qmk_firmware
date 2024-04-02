@@ -1,4 +1,3 @@
- * Bug: MO(1) in wrong position on physical keys vs. keymap - matrix bug?
  * Add more RGB things
  * Split RGB backlight and underglow
  * See if debug actually works (was reverted in bec190d30a3ffed209795ae59d9a2287f490253c)
