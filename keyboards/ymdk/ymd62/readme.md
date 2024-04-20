@@ -9,5 +9,8 @@ The keyboard should then be usable again.
 
 TODO:
 
- - [ ] Figure out why qmk console doesn't seem to work
- - [ ] Update to QMK latest tag
+ * Update to QMK latest tag
+
+Possible future improvements:
+
+ * Split backlight and underglow so they can be controlled separately. Currently they both use the same rgb_matrix settings and controls.
