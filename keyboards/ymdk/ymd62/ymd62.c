@@ -1,11 +1,6 @@
 
 #include "quantum.h"
 
-// TODO: g_led_config
-// https://github.com/samhocevar-forks/qmk-firmware/blob/master/docs/feature_rgb_matrix.md
-
-// Below copied from ymd60 ISO sources - is it correct?
-
 #ifdef RGB_MATRIX_ENABLE
 
 #    define XX NO_LED
