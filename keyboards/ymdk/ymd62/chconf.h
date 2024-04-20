@@ -1,4 +1,4 @@
-/* Copyright 2020 QMK
+/* Copyright 2020, 2024 QMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,4 +38,3 @@
 #define CH_CFG_USE_HEAP TRUE
 
 #include_next <chconf.h>
-
