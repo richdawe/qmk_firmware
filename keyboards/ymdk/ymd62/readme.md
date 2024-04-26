@@ -7,10 +7,6 @@ Note: The device does not seem to reconnect automatically after the firmware has
 Wait for the USB device to disappear after writing firmware, then unplug and replug it.
 The keyboard should then be usable again.
 
-TODO:
-
- * Update to QMK latest tag
-
 Possible future improvements:
 
  * Split backlight and underglow so they can be controlled separately. Currently they both use the same rgb_matrix settings and controls.

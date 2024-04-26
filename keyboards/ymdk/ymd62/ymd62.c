@@ -1,7 +1,10 @@
 
 #include "quantum.h"
 
-#ifdef RGB_MATRIX_ENABLE
+// TODO: port backlights to info.json
+
+#if 0
+// #ifdef RGB_MATRIX_ENABLE
 
 #    define XX NO_LED
 led_config_t g_led_config = {
