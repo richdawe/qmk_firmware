@@ -1,5 +1,5 @@
 /* Copyright 2021 Mike Tsao
- * Copyright 2024 Richard Dawe
+ * Copyright 2024 Richard Dawe (@richdawe)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,6 @@
 
 #pragma once
 
-// From YMDK sources
 #undef STM32_HSECLK
 #define STM32_HSECLK 8000000
 

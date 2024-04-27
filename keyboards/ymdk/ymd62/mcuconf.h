@@ -1,5 +1,5 @@
 /* Copyright 2020 QMK
- * Copyright 2024 Richard Dawe
+ * Copyright 2024 Richard Dawe (@richdawe)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
