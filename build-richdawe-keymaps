@@ -13,6 +13,7 @@ KEYMAPS="
 	keyhive/ut472:richdawe2
 	kiserdesigns/monorail2:richdawe
 	oxwich50:richdawe
+	parallel/parallel_65/hotswap:richdawe
 "
 
 for k in $KEYMAPS; do
