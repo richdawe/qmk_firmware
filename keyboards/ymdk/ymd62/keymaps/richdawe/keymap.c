@@ -5,6 +5,10 @@
 #define LT2_SPC LT(2, KC_SPC)
 #define LT3_ESC LT(3, KC_ESC)
 
+enum my_keycodes {
+	BL_ONLY = SAFE_RANGE // Turn on backlight LEDs only
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [0] = LAYOUT_60_iso( /* Base */
     LT3_ESC,  KC_1,     KC_2,     KC_3,  KC_4,  KC_5,  KC_6,    KC_7,  KC_8,  KC_9,     KC_0,     KC_MINS,  KC_EQL,  KC_BSPC,\
@@ -30,8 +34,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [3] = LAYOUT_60_iso( /* RGB and media controls */
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_DEL, \
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_MPLY,  KC_MPRV,  KC_MNXT,          \
-    KC_CAPS,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,\
+    KC_CAPS,  BL_ONLY,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,\
     _______,  RGB_TOG,  RGB_MOD,  RGB_RMOD, RGB_HUI,  RGB_HUD,  RGB_SAI,  RGB_SAD,  RGB_VAI,  RGB_VAD,  RGB_M_P,  _______,            _______,
     QK_BOOT,  _______,  _______,                                _______,                                _______,  KC_MUTE,  KC_VOLD,  KC_VOLU),
 };
 
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case BL_ONLY:
+      if (record->event.pressed) {
+        rgb_matrix_mode(RGB_MATRIX_CUSTOM_backlight_only);
+      }
+      return false;
+
+    default:
+      return true;
+  }
+}
