@@ -26,5 +26,9 @@ for k in $KEYMAPS; do
 		exit 1
 	fi
 
+	echo
+	echo COMPILING:
+	echo qmk compile -kb $kb -km $km
+	echo
 	qmk compile -kb $kb -km $km
 done
