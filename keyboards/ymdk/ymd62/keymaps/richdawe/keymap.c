@@ -6,8 +6,18 @@
 #define LT3_ESC LT(3, KC_ESC)
 
 enum my_keycodes {
-	BL_ONLY = SAFE_RANGE // Turn on backlight LEDs only
+  MACRO_RGBI   = SAFE_RANGE,     /* Output current RGB info */
+  MACRO_RGBRST = SAFE_RANGE + 1, /* Reset RGB underglow colour to default */
+  BL_ONLY      = SAFE_RANGE + 2, /* Turn on backlight LEDs only */
 };
+
+#define M_RGBI MACRO_RGBI
+#define M_RGBRST MACRO_RGBRST
+
+// Purple
+#define MY_DEFAULT_HUE 	MIN(240, UINT8_MAX)
+#define MY_DEFAULT_SAT 	MIN(215, UINT8_MAX)
+#define MY_DEFAULT_VAL 	MIN(95, RGB_MATRIX_MAXIMUM_BRIGHTNESS)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [0] = LAYOUT_60_iso( /* Base */
@@ -34,20 +44,50 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [3] = LAYOUT_60_iso( /* RGB and media controls */
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_DEL, \
     _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_MPLY,  KC_MPRV,  KC_MNXT,          \
-    KC_CAPS,  BL_ONLY,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,\
+    KC_CAPS,  BL_ONLY,  M_RGBRST, M_RGBI,   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,\
     _______,  RGB_TOG,  RGB_MOD,  RGB_RMOD, RGB_HUI,  RGB_HUD,  RGB_SAI,  RGB_SAD,  RGB_VAI,  RGB_VAD,  RGB_M_P,  _______,            _______,
     QK_BOOT,  _______,  _______,                                _______,                                _______,  KC_MUTE,  KC_VOLD,  KC_VOLU),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case BL_ONLY:
-      if (record->event.pressed) {
-        rgb_matrix_mode(RGB_MATRIX_CUSTOM_backlight_only);
-      }
-      return false;
+  case MACRO_RGBI: /* Output current RGB info */
+    if (record->event.pressed) {
+      char buf[32];
+      const uint8_t hue = rgb_matrix_get_hue();
+      const uint8_t sat = rgb_matrix_get_sat();
+      const uint8_t val = rgb_matrix_get_val();
 
-    default:
-      return true;
+      snprintf(buf, sizeof(buf), "H: %u S: %u V: %u", hue, sat, val);
+      send_string(buf);
+    } else {
+      // when keycode QMKBEST is released
+    }
+    return false;
+
+  case MACRO_RGBRST: /* Reset RGB underglow colour to default */
+    if (record->event.pressed) {
+      rgb_matrix_sethsv(MY_DEFAULT_HUE, MY_DEFAULT_SAT, MY_DEFAULT_VAL);
+    } else {
+      // when keycode QMKBEST is released
+    }
+    return false;
+
+  case BL_ONLY: /* Backlight only on/off */
+    if (record->event.pressed) {
+      switch (rgb_matrix_get_flags()) {
+      case LED_FLAG_ALL:
+        rgb_matrix_set_flags(LED_FLAG_UNDERGLOW);
+        break;
+
+      default:
+        rgb_matrix_set_flags(LED_FLAG_ALL);
+        break;
+      }
+    }
+    return false;
+
+  default:
+    return true;
   }
 }
