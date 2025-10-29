@@ -14,6 +14,7 @@ KEYMAPS="
 	kiserdesigns/monorail2:richdawe
 	oxwich50:richdawe
 	parallel/parallel_65/hotswap:richdawe
+	ymdk/ymd62:richdawe
 "
 
 for k in $KEYMAPS; do
@@ -25,5 +26,9 @@ for k in $KEYMAPS; do
 		exit 1
 	fi
 
+	echo
+	echo COMPILING:
+	echo qmk compile -kb $kb -km $km
+	echo
 	qmk compile -kb $kb -km $km
 done
