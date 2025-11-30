@@ -6,8 +6,6 @@
     "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
-        "command": false,
-        "console": false,
         "extrakey": true,
         "mousekey": true,
         "nkro": true
@@ -31,7 +29,7 @@
         "rows": ["GP12", "GP13", "GP14", "GP15"]
     },
     "processor": "RP2040",
-    "url": "",
+    "url": "https://github.com/richdawe/oxwich50",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0000",

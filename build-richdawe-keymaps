@@ -5,16 +5,19 @@ set -e
 echo
 echo
 
+# TODO: Fix these:
+#
+#	keyhive/ut472:richdawe
+#	keyhive/ut472:richdawe2
+#	kiserdesigns/monorail2:richdawe
+#	ymdk/ymd62:richdawe
+#
 KEYMAPS="
 	dm9records/lain:richdawe
 	hs60/v2/ansi:richdawe
 	hs60/v2/iso:richdawe
-	keyhive/ut472:richdawe
-	keyhive/ut472:richdawe2
-	kiserdesigns/monorail2:richdawe
 	oxwich50:richdawe
 	parallel/parallel_65/hotswap:richdawe
-	ymdk/ymd62:richdawe
 "
 
 for k in $KEYMAPS; do
@@ -25,6 +28,12 @@ for k in $KEYMAPS; do
 		echo "Keymap format error: $k" 1>&2
 		exit 1
 	fi
+
+	echo
+	echo LINTING:
+	echo qmk lint -kb $kb -km $km
+	echo
+	qmk lint -kb $kb -km $km
 
 	echo
 	echo COMPILING:

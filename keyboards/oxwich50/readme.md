@@ -1,12 +1,8 @@
 # oxwich50
 
-![oxwich50](imgur.com image replace me!)
-
-*A short description of the keyboard/project*
-
 * Keyboard Maintainer: [Elliot Powell](https://github.com/Elliot Powell)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Hardware Supported: RP2040
+* Hardware Availability: Not generally available, but [open source](https://github.com/richdawe/oxwich50)
 
 Make example for this keyboard (after setting up your build environment):
 
