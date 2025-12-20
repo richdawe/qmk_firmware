@@ -5,20 +5,22 @@ set -e
 echo
 echo
 
-# TODO: Fix these:
-#
-#	keyhive/ut472:richdawe
-#	keyhive/ut472:richdawe2
 #	kiserdesigns/monorail2:richdawe
-#	ymdk/ymd62:richdawe
-#
 KEYMAPS="
 	dm9records/lain:richdawe
 	hs60/v2/ansi:richdawe
 	hs60/v2/iso:richdawe
+	keyhive/ut472:richdawe
+	keyhive/ut472:richdawe2
 	oxwich50:richdawe
 	parallel/parallel_65/hotswap:richdawe
+	ymdk/ymd62:richdawe
 "
+
+if [ -n "$1" ]; then
+	KEYMAPS="$1"
+	shift
+fi
 
 for k in $KEYMAPS; do
 	kb=$(echo $k | cut -f 1 -d :)

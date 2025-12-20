@@ -103,8 +103,8 @@ LAYOUT( /* Tab */
    * |Boot |RGBRS|     |Capsl|      |          |       |MPLAY|MPREV|VOLDN|MNEXT|
    * `-------------------------------------------------------------------------'
    */
-  _______, KC_F1,   KC_F2,   KC_F3,   RGB_TOG, RGB_MOD, RGB_VAI, RGB_HUI, RGB_SAI, _______, KC_PSCR, KC_DELETE,
-  KC_ESC,  KC_F4,   KC_F5,   KC_F6, MACRO_RGBI,RGB_M_P, RGB_VAD, RGB_HUD, RGB_SAD, _______, _______, _______,
+  _______, KC_F1,   KC_F2,   KC_F3,   UG_TOGG, UG_NEXT, UG_VALU, UG_HUEU, UG_SATU, _______, KC_PSCR, KC_DELETE,
+  KC_ESC,  KC_F4,   KC_F5,   KC_F6, MACRO_RGBI,RGB_M_P, UG_VALD, UG_HUED, UG_SATD, _______, _______, _______,
   _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, KC_MUTE, KC_VOLU, _______,
   QK_BOOT, MACRO_RGBRST, _______, KC_CAPS, _______,     _______,      _______, KC_MPLY, KC_MPRV, KC_VOLD, KC_MNXT
 ),
