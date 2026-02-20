@@ -13,3 +13,12 @@ Copy this folder named "monorail" into your "vial_qmk/keyboards/" directory.
 
 Compile Vial/QMK for this keyboard:
     make monorail:vial
+
+---
+
+Defines removed in the conversion to QMK keyboard.json:
+
+#define ENCODERS_PAD_A { GP12 }
+#define ENCODERS_PAD_B { GP24 }
+//#define ENCODERS_PAD_A { GP2 }
+//#define ENCODERS_PAD_B { GP3 }
