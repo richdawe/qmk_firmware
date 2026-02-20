@@ -19,8 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define CONFIG_H
 
 
-#define MATRIX_ROWS 5
-#define MATRIX_COLS 12
+// #define MATRIX_ROWS 5
+// #define MATRIX_COLS 12
 
 #define LED0_PIN GP25
 #define LED1_PIN GP26
@@ -28,22 +28,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // flip the 0 to a 1 to go back to a regular caps lock indicator, or remove these 2 lines entirely to eliminate the caps lock indicator function
 
-#define MATRIX_ROW_PINS { GP9, GP1, GP4, GP5, GP28 }
-#define MATRIX_COL_PINS { GP23, GP22, GP21, GP20, GP19, GP18, GP17, GP16, GP10, GP11, GP6, GP0 }
+// #define MATRIX_ROW_PINS { GP9, GP1, GP4, GP5, GP28 }
+// #define MATRIX_COL_PINS { GP23, GP22, GP21, GP20, GP19, GP18, GP17, GP16, GP10, GP11, GP6, GP0 }
 
 
 
-#define ENCODERS_PAD_A { GP12 }
-#define ENCODERS_PAD_B { GP24 }
-//#define ENCODERS_PAD_A { GP2 }
-//#define ENCODERS_PAD_B { GP3 }
+// #define ENCODERS_PAD_A { GP12 }
+// #define ENCODERS_PAD_B { GP24 }
+// //#define ENCODERS_PAD_A { GP2 }
+// //#define ENCODERS_PAD_B { GP3 }
 
-#define ENCODER_RESOLUTIONS { 4 }
+// #define ENCODER_RESOLUTIONS { 4 }
 
 //#define RGB_DI_PIN GP3
 #define DRIVER_LED_TOTAL 12
 #define RGB_MATRIX_LED_COUNT 12
-#define WS2812_DI_PIN GP29
+// #define WS2812_DI_PIN GP29
 
 #define RGB_MATRIX_EFFECTS
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS

@@ -1,6 +1,7 @@
 # richdawe keymap for Monorail by Kiser Designs
 
 While the Monorail supports Vial out of the box, using a fork of the Vial repo, I like to use vanilla QMK. So here it is, in my fork of QMK!
+I'm using this with a Monorail V2 with the Jet layout.
 
 https://github.com/KiserDesigns/Monorail
 https://kiserdesigns.bigcartel.com/

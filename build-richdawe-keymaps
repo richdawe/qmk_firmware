@@ -5,21 +5,24 @@ set -e
 echo
 echo
 
-#	kiserdesigns/monorail2:richdawe
 KEYMAPS="
 	dm9records/lain:richdawe
 	hs60/v2/ansi:richdawe
 	hs60/v2/iso:richdawe
 	keyhive/ut472:richdawe
 	keyhive/ut472:richdawe2
+	kiserdesigns/monorail2:richdawe
 	oxwich50:richdawe
 	parallel/parallel_65/hotswap:richdawe
 	ymdk/ymd62:richdawe
 "
 
 if [ -n "$1" ]; then
-	KEYMAPS="$1"
-	shift
+	KEYMAPS=
+	for k in $*; do
+		KEYMAPS="$KEYMAPS $1"
+		shift
+	done
 fi
 
 for k in $KEYMAPS; do
