@@ -1,5 +1,5 @@
 /* Copyright 2018 Carlos Filoteo
- * Copyright 2021-2023, 2025 Richard Dawe
+ * Copyright 2021-2023, 2025, 2026 Richard Dawe
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,6 +26,7 @@ ps2pdf ut472-keymap-richdawe2.ps ut472-keymap-richdawe2.pdf
 
 #define LT1_SPC LT(1, KC_SPC)
 #define LT2_ESC LT(2, KC_ESC)
+#define LT2_QUO LT(2, KC_QUOT)
 #define LT3_TAB LT(3, KC_TAB)
 
 #define MT_LASL LALT_T(KC_SLSH)
@@ -42,17 +43,17 @@ LAYOUT(
    * ,-------------------------------------------------------------------------.
    * |Tb/L3|  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |Bspace |
    * |-------------------------------------------------------------------------+
-   * |Esc/L2|  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |   '  |
+   * |Esc/L2|  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  | '/L2 |
    * |-------------------------------------------------------------------------+
    * | Shift |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | Up  |Sh/En|
    * |-------------------------------------------------------------------------+
-   * |Ctrl |Ctrl | Gui | Alt |Spc/L1| Space/L1  |Spc/L1|/ Alt| Left|Down |Right|
+   * |Ctrl |Ctrl | Gui | Alt |Spc/L1|   Space   |Spc/L1|/ Alt| Left|Down |Right|
    * `-------------------------------------------------------------------------'
    */
   LT3_TAB, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-  LT2_ESC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+  LT2_ESC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, LT2_QUO,
   KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_UP,   SC_SENT,
-  KC_LCTL, KC_LCTL, KC_LGUI, KC_LALT, LT1_SPC,    LT1_SPC,       LT1_SPC, MT_LASL, KC_LEFT, KC_DOWN, KC_RGHT
+  KC_LCTL, KC_LCTL, KC_LGUI, KC_LALT, LT1_SPC,     KC_SPC,       LT1_SPC, MT_LASL, KC_LEFT, KC_DOWN, KC_RGHT
 ),
 
 
