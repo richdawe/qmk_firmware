@@ -44,19 +44,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *    ,-----+-----+-----+-----+-----+-----.
    *    |     |Trnsp|Trnsp|Trnsp|Trnsp|Trnsp|
    * ,--+-----+-----+-----+-----+-----+-----------------------------------------.
-   * |  :  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |Bspace  |
+   * |  .  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |Bspace  |
    * |--------------------------------------------------------------------------+
-   * |  .   |  !  |  @  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  |   \   |
+   * |  :   |  !  |  "  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  |   \   |
    * |--------------------------------------------------------------------------+
-   * |        |     |  `  |  ~  |  |  |  +  |  -  |  =  |  [  |  ]  |PgUp |     |
+   * |        |  \  |  ~  |  `  |  |  |  -  |  !  |  =  |  [  |  ]  |PgUp |     |
    * |--------------------------------------------------------------------------+
    * |      |     |      |               |             |      |Home |PgDn | End |
    * `--------------------------------------------------------------------------'
    */
   XXXXXXX, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
-  KC_COLN, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
-  KC_DOT,  S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5), S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), KC_BSLS, \
-  _______, XXXXXXX, KC_GRV,  KC_TILD, KC_PIPE, KC_PLUS, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_PGUP, _______, \
+  KC_DOT,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+  KC_COLN, S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5), S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), KC_BSLS, \
+  _______, KC_BSLS, KC_TILD, KC_GRV,  KC_PIPE, KC_MINS, S(KC_1), KC_EQL,  KC_LBRC, KC_RBRC, KC_PGUP, _______, \
   _______, _______, _______, _______,      _______,          _______,     XXXXXXX, KC_HOME, KC_PGDN, KC_END
 ),
 [2] = LAYOUT( \
