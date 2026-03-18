@@ -15,6 +15,7 @@ ps2pdf monorail2-keymap-richdawe.ps monorail2-keymap-richdawe.pdf
 
 #define LT1_SPC LT(1, KC_SPC)
 #define LT2_ESC LT(2, KC_ESC)
+#define LT2_QUO LT(2, KC_QUOT)
 #define LT3_ESC LT(3, KC_ESC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -26,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,--+-----+-----+-----+-----+-----+-----------------------------------------.
    * | Tab |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |Bspace  |
    * |--------------------------------------------------------------------------+
-   * |Esc/L2|  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |   '   |
+   * |Esc/L2|  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  | '/L2  |
    * |--------------------------------------------------------------------------+
    * | Shift  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | Up  |Sh/En|
    * |--------------------------------------------------------------------------+
@@ -35,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   LT3_ESC, KC_GRV,  KC_LBRC,    KC_RBRC,    KC_MINS, KC_EQL, \
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
-  LT2_ESC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
+  LT2_ESC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, LT2_QUO, \
   KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_UP,   SC_SENT, \
   KC_LCTL, KC_LGUI, KC_LALT, KC_LALT,     LT1_SPC,          LT1_SPC,      KC_SLSH, KC_LEFT, KC_DOWN, KC_RGHT
 ),
