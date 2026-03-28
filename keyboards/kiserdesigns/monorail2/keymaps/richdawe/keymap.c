@@ -7,7 +7,7 @@
 // Convert this into a printable keymap on Linux using:
 /*
 grep -A13 '[=] LAYOUT(' keymap.c > monorail2-keymap-richdawe.txt
-enscript -v -r -f Courier7 --media=A4 monorail2-keymap-richdawe.txt -o monorail2-keymap-richdawe.ps
+enscript -v -f Courier9 --media=A4 monorail2-keymap-richdawe.txt -o monorail2-keymap-richdawe.ps
 ps2pdf monorail2-keymap-richdawe.ps monorail2-keymap-richdawe.pdf
 */
 
