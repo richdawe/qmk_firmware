@@ -7,7 +7,7 @@
 // Convert this into a printable keymap on Linux using:
 /*
 grep -A13 '[=] LAYOUT(' keymap.c > monorail2-keymap-richdawe.txt
-enscript -v -r -f Courier7 --media=A4 monorail2-keymap-richdawe.txt -o monorail2-keymap-richdawe.ps
+enscript -v -f Courier9 --media=A4 monorail2-keymap-richdawe.txt -o monorail2-keymap-richdawe.ps
 ps2pdf monorail2-keymap-richdawe.ps monorail2-keymap-richdawe.pdf
 */
 
@@ -15,6 +15,7 @@ ps2pdf monorail2-keymap-richdawe.ps monorail2-keymap-richdawe.pdf
 
 #define LT1_SPC LT(1, KC_SPC)
 #define LT2_ESC LT(2, KC_ESC)
+#define LT2_QUO LT(2, KC_QUOT)
 #define LT3_ESC LT(3, KC_ESC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -26,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,--+-----+-----+-----+-----+-----+-----------------------------------------.
    * | Tab |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |Bspace  |
    * |--------------------------------------------------------------------------+
-   * |Esc/L2|  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |   '   |
+   * |Esc/L2|  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  | '/L2  |
    * |--------------------------------------------------------------------------+
    * | Shift  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | Up  |Sh/En|
    * |--------------------------------------------------------------------------+
@@ -35,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   LT3_ESC, KC_GRV,  KC_LBRC,    KC_RBRC,    KC_MINS, KC_EQL, \
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
-  LT2_ESC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
+  LT2_ESC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, LT2_QUO, \
   KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_UP,   SC_SENT, \
   KC_LCTL, KC_LGUI, KC_LALT, KC_LALT,     LT1_SPC,          LT1_SPC,      KC_SLSH, KC_LEFT, KC_DOWN, KC_RGHT
 ),
@@ -44,19 +45,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *    ,-----+-----+-----+-----+-----+-----.
    *    |     |Trnsp|Trnsp|Trnsp|Trnsp|Trnsp|
    * ,--+-----+-----+-----+-----+-----+-----------------------------------------.
-   * |  :  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |Bspace  |
+   * |  .  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |Bspace  |
    * |--------------------------------------------------------------------------+
-   * |  .   |  !  |  @  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  |   \   |
+   * |  :   |  !  |  @  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  |   \   |
    * |--------------------------------------------------------------------------+
-   * |        |     |  `  |  ~  |  |  |  +  |  -  |  =  |  [  |  ]  |PgUp |     |
+   * |        |  \  |  ~  |  `  |  |  |  -  |  !  |  =  |  [  |  ]  |PgUp |     |
    * |--------------------------------------------------------------------------+
    * |      |     |      |               |             |      |Home |PgDn | End |
    * `--------------------------------------------------------------------------'
    */
   XXXXXXX, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
-  KC_COLN, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
-  KC_DOT,  S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5), S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), KC_BSLS, \
-  _______, XXXXXXX, KC_GRV,  KC_TILD, KC_PIPE, KC_PLUS, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_PGUP, _______, \
+  KC_DOT,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+  KC_COLN, S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5), S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), KC_BSLS, \
+  _______, KC_BSLS, KC_TILD, KC_GRV,  KC_PIPE, KC_MINS, S(KC_1), KC_EQL,  KC_LBRC, KC_RBRC, KC_PGUP, _______, \
   _______, _______, _______, _______,      _______,          _______,     XXXXXXX, KC_HOME, KC_PGDN, KC_END
 ),
 [2] = LAYOUT( \
