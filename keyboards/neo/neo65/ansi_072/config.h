@@ -1,5 +1,6 @@
 /* 
 Copyright 2023 NEO
+Copyright 2026 Richard Dawe
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -92,5 +93,6 @@ I2C1_TIMINGR_SCLL    129U
 //   #define DRIVER_ADDR_2 0b1010011
 #    define DRIVER_COUNT                  1  //2
 #    define RGB_MATRIX_LED_COUNT          68   //DRIVER_LED_TOTAL              //RGB_MATRIX_LED_COUNT 
+#    define IS31FL3741_I2C_ADDRESS_1      IS31FL3741_I2C_ADDRESS_GND
 
 #endif

@@ -1,7 +1,7 @@
 {
-    "keyboard_name": "NEO65 ANSI",
+    "keyboard_name": "NEO65 ANSI with STM32 F072",
     "manufacturer":"NEO Studio",
-    "url": "",
+    "url": "https://www.qwertykeys.com/en-gb/products/neo65-1",
     "maintainer": "NEO Studio",
     "usb": {
         "vid": "0x4E45",
@@ -21,7 +21,7 @@
         "rgb_matrix": true
     },
     "rgb_matrix": {
-        "driver": "IS31FL3741",
+        "driver": "is31fl3741",
         "max_brightness": 128,
         "animations": {
             "solid_color": true,
